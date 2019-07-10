@@ -198,7 +198,6 @@ It's either stopped time or current time."
   ;; (cur - started) - (cur - break) - max
   (let* ((started (velox--started state))
          (break (or (velox--break state) (velox--ended state)))
-         (work (velox--work-duration state))
          (ended (velox--ended state))
          (max (seconds-to-time velox-seconds))
          (overwork (time-subtract (time-subtract (time-subtract ended started)
@@ -300,7 +299,6 @@ TIME may be nil."
   (let* ((state (velox--current-state))
          (total (velox--total-duration state))
          (ellapsed (round (time-to-seconds total))))
-    (velox--tick-tack ellapsed)
     (when (zerop (mod ellapsed velox-update-interval))
 			(velox-alert)
       (run-hooks 'velox-update-hook)))
