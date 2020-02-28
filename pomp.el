@@ -1,6 +1,6 @@
 ;;; pomp.el --- Simple and cool pomodoro timer -*- lexical-binding: t; -*-
 ;;
-;; Copyright (c) 2019 Jade Michael Thornton
+;; © 2019-2019 Jade Michael Thornton
 ;;
 ;; This program is free software; you may redistribute it and/or modify it under
 ;; the terms of the GNU General Public License version 3, as published by the
