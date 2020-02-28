@@ -26,7 +26,7 @@
 ;;
 ;;  | key   | binding             |
 ;;  |-------+---------------------|
-;;  | S     | pomp-stop           |
+;;  | W     | pomp-work           |
 ;;  | B     | pomp-break          |
 ;;  | Q     | pomp-quit           |
 ;;  | R     | pomp-reset          |
@@ -35,6 +35,10 @@
 ;;  | ?     | describe-mode       |
 ;;  | g     | revert-buffer       |
 ;;  | DEL   | scroll-down-command |
+;;  |-------+---------------------|
+;;  | Deprecated                  |
+;;  |-------+---------------------|
+;;  | S     | pomp-stop           |
 ;;
 ;; CUSTOMIZATION
 ;;
@@ -381,6 +385,7 @@ TIME may be nil."
     (define-key map (kbd "q") #'quit-window)
     (define-key map (kbd "Q") #'pomp-quit)
     (define-key map (kbd "R") #'pomp-reset)
+    (define-key map (kbd "W") #'pomp-work)
     (define-key map (kbd "S") #'pomp-stop)
     (define-key map (kbd "B") #'pomp-break)
     (suppress-keymap map)
@@ -417,7 +422,7 @@ TIME may be nil."
           (plist-put state :snooze t)
           (when (or (not pomp-confirm-end-break)
                     (yes-or-no-p "Stop break and start new pomp?"))
-            (pomp-stop)))
+            (pomp-work)))
       (plist-put state :break (current-time)))))
 
 (defun pomp-reset ()
@@ -426,12 +431,14 @@ TIME may be nil."
   (when (y-or-n-p "Are you sure you want reset pomps? ")
     (pomp--reset)))
 
-(defun pomp-stop ()
-  "Stop current working pomp."
+(defun pomp-work ()
+  "Begin a new work pomp."
   (interactive)
   (let ((state (pomp--current-state)))
     (plist-put state :stopped (current-time)))
   (nconc pomp-global-state (list (pomp--make-state))))
+
+(define-obsolete-function-alias 'pomp-stop #'pomp-work)
 
 
 ;;; package
