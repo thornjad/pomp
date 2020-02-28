@@ -17,31 +17,31 @@
 ;;
 ;; USAGE
 ;;
-;; 	M-x pomp or bind to a useful key like <f12>.
+;;  M-x pomp or bind to a useful key like <f12>.
 ;;
-;; 	When pomp opens, it automatically begins a work session. There is nothing
-;; 	to do at this point except work!
+;;  When pomp opens, it automatically begins a work session. There is nothing
+;;  to do at this point except work!
 ;;
 ;; KEYBINDINGS
 ;;
-;; 	| key   | binding             |
-;; 	|-------+---------------------|
-;; 	| S     | pomp-stop          |
-;; 	| B     | pomp-break         |
-;; 	| Q     | pomp-quit          |
-;; 	| R     | pomp-reset         |
-;; 	| q     | quit-window         |
-;; 	| h     | describe-mode       |
-;; 	| ?     | describe-mode       |
-;; 	| g     | revert-buffer       |
-;; 	| DEL   | scroll-down-command |
+;;  | key   | binding             |
+;;  |-------+---------------------|
+;;  | S     | pomp-stop           |
+;;  | B     | pomp-break          |
+;;  | Q     | pomp-quit           |
+;;  | R     | pomp-reset          |
+;;  | q     | quit-window         |
+;;  | h     | describe-mode       |
+;;  | ?     | describe-mode       |
+;;  | g     | revert-buffer       |
+;;  | DEL   | scroll-down-command |
 ;;
 ;; CUSTOMIZATION
 ;;
-;; 	To change timer duration:
+;;  To change timer duration:
 ;;
-;; 		(setq pomp-seconds (* 25 60))     ; 25 minutes for work period
-;; 		(setq pomp-break-seconds (*5 60)) ; 5 minutes for break period
+;;    (setq pomp-seconds (* 25 60))     ; 25 minutes for work period
+;;    (setq pomp-break-seconds (*5 60)) ; 5 minutes for break period
 ;;
 ;;; Code:
 
@@ -94,7 +94,7 @@
 
 (defun pomp-alert ()
   "Default pomp alert."
-	(message (pomp-message)))
+  (message (pomp-message)))
 
 (defvar pomp-update-hook nil)
 
@@ -300,7 +300,7 @@ TIME may be nil."
          (total (pomp--total-duration state))
          (ellapsed (round (time-to-seconds total))))
     (when (zerop (mod ellapsed pomp-update-interval))
-			(pomp-alert)
+      (pomp-alert)
       (run-hooks 'pomp-update-hook)))
   (pomp--render))
 
