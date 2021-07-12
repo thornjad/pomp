@@ -4,7 +4,7 @@
 ;; Copyright © 2019-2021 Jade Michael Thornton
 ;; URL: https://gitlab.com/thornjad/pomp
 ;; Package-Requires ((emacs "27.0"))
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;;
 ;; This file is not part of GNU Emacs
 ;;
@@ -447,7 +447,7 @@ TIME may be nil."
     (plist-put state :stopped (current-time)))
   (nconc pomp-global-state (list (pomp--make-state))))
 
-(define-obsolete-function-alias 'pomp-stop #'pomp-work)
+(define-obsolete-function-alias 'pomp-stop #'pomp-work "1.0.0")
 
 
 ;;; package

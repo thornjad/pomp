@@ -1,7 +1,7 @@
 # pomp - Simple Emacs pomodoro timer
 
 _Author:_ Jade Michael Thornton<br>
-_Version:_ 1.0.0<br>
+_Version:_ 1.0.1<br>
 
 Pomp is a simple and useful pomodoro-style timer.
 
