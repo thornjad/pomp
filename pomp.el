@@ -1,28 +1,37 @@
-;;; pomp.el --- Simple and cool pomodoro timer -*- lexical-binding: t; -*-
+;;; pomp.el --- Simple Emacs pomodoro timer -*- lexical-binding: t; -*-
 ;;
-;; © 2019-2019 Jade Michael Thornton
-;;
-;; This program is free software; you may redistribute it and/or modify it under
-;; the terms of the GNU General Public License version 3, as published by the
-;; Free Software Foundation. This program carries no warranty whatsoever,
-;; without even the implied warranty of merchantability or fitness for a
-;; particular purpose. See <https://www.gnu.org/licenses/> for more details.
+;; Author: Jade Michael Thornton
+;; Copyright © 2019-2021 Jade Michael Thornton
+;; URL: https://gitlab.com/thornjad/pomp
+;; Package-Requires ((emacs "27.0"))
+;; Version: 1.0.0
 ;;
 ;; This file is not part of GNU Emacs
 ;;
+;; Permission to use, copy, modify, and/or distribute this software for any
+;; purpose with or without fee is hereby granted, provided that the above
+;; copyright notice and this permission notice appear in all copies.
+;;
+;; The software is provided "as is" and the author disclaims all warranties with
+;; regard to this software including all implied warranties of merchantability
+;; and fitness. In no event shall the author be liable for any special, direct,
+;; indirect, or consequential damages or any damages whatsoever resulting from
+;; loss of use, data or profits, whether in an action of contract, negligence or
+;; other tortious action, arising out of or in connection with the use or
+;; performance of this software.
+
 ;;; Commentary:
 ;;
-;; Pomp is a simple and useful pomodoro-style timer. Pomp is based on Pomidor
-;; by TatriX, which is in turn based on Tomatinho by Konrad Scorciapino.
+;; Pomp is a simple and useful pomodoro-style timer.
 ;;
-;; USAGE
+;; Usage:
 ;;
 ;;  M-x pomp or bind to a useful key like <f12>.
 ;;
 ;;  When pomp opens, it automatically begins a work session. There is nothing
 ;;  to do at this point except work!
 ;;
-;; KEYBINDINGS
+;; Keybindings:
 ;;
 ;;  | key   | binding             |
 ;;  |-------+---------------------|
@@ -40,13 +49,13 @@
 ;;  |-------+---------------------|
 ;;  | S     | pomp-stop           |
 ;;
-;; CUSTOMIZATION
+;; Customization:
 ;;
 ;;  To change timer duration:
 ;;
 ;;    (setq pomp-seconds (* 25 60))     ; 25 minutes for work period
 ;;    (setq pomp-break-seconds (*5 60)) ; 5 minutes for break period
-;;
+
 ;;; Code:
 
 (require 'cl-lib)
