@@ -7,7 +7,7 @@ Pomp is a simple and useful pomodoro-style timer.
 
 ### Usage
 
- M-x pomp or bind to a useful key like <f12>.
+ M-x pomp or bind to a useful key.
 
  When pomp opens, it automatically begins a work session. There is nothing
  to do at this point except work!
@@ -15,7 +15,7 @@ Pomp is a simple and useful pomodoro-style timer.
 ### Keybindings
 
  | key   | binding             |
- |-------+---------------------|
+ |-------|---------------------|
  | W     | pomp-work           |
  | B     | pomp-break          |
  | Q     | pomp-quit           |
@@ -25,9 +25,9 @@ Pomp is a simple and useful pomodoro-style timer.
  | ?     | describe-mode       |
  | g     | revert-buffer       |
  | DEL   | scroll-down-command |
- |-------+---------------------|
+ |-------|---------------------|
  | Deprecated                  |
- |-------+---------------------|
+ |-------|---------------------|
  | S     | pomp-stop           |
 
 ### Customization

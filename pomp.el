@@ -1,7 +1,7 @@
 ;;; pomp.el --- Simple Emacs pomodoro timer -*- lexical-binding: t; -*-
 ;;
 ;; Author: Jade Michael Thornton
-;; Copyright © 2019-2021 Jade Michael Thornton
+;; Copyright © 2019-2022 Jade Michael Thornton
 ;; URL: https://gitlab.com/thornjad/pomp
 ;; Package-Requires ((emacs "27.0"))
 ;; Version: 1.0.1
@@ -26,7 +26,7 @@
 ;;
 ;; Usage:
 ;;
-;;  M-x pomp or bind to a useful key like <f12>.
+;;  M-x pomp or bind to a useful key.
 ;;
 ;;  When pomp opens, it automatically begins a work session. There is nothing
 ;;  to do at this point except work!
@@ -34,7 +34,7 @@
 ;; Keybindings:
 ;;
 ;;  | key   | binding             |
-;;  |-------+---------------------|
+;;  |-------|---------------------|
 ;;  | W     | pomp-work           |
 ;;  | B     | pomp-break          |
 ;;  | Q     | pomp-quit           |
@@ -44,9 +44,9 @@
 ;;  | ?     | describe-mode       |
 ;;  | g     | revert-buffer       |
 ;;  | DEL   | scroll-down-command |
-;;  |-------+---------------------|
+;;  |-------|---------------------|
 ;;  | Deprecated                  |
-;;  |-------+---------------------|
+;;  |-------|---------------------|
 ;;  | S     | pomp-stop           |
 ;;
 ;; Customization:
