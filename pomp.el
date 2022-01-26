@@ -390,6 +390,8 @@ TIME may be nil."
     (define-key map (kbd "R") #'pomp-reset)
     (define-key map (kbd "W") #'pomp-work)
     (define-key map (kbd "B") #'pomp-break)
+    (define-key map (kbd "?") #'pomp-describe-keymap)
+    (define-key map (kbd "h") #'pomp-describe-keymap)
     (suppress-keymap map)
     map))
 
@@ -408,6 +410,11 @@ TIME may be nil."
 (defun pomp-total-duration ()
   "Return current total duration."
   (pomp--total-duration (pomp--current-state)))
+
+(defun pomp-describe-keymap ()
+  "Call `describe-keymap' for pomp."
+  (interactive)
+  (describe-keymap 'pomp-mode-map))
 
 (defun pomp-quit ()
   "Turn off Pomp."
