@@ -42,8 +42,6 @@
 ;;  | q     | quit-window         |
 ;;  | h     | describe-mode       |
 ;;  | ?     | describe-mode       |
-;;  | g     | revert-buffer       |
-;;  | DEL   | scroll-down-command |
 ;;
 ;; Customization:
 ;;
