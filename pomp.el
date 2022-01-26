@@ -45,12 +45,6 @@
 ;;  | g     | revert-buffer       |
 ;;  | DEL   | scroll-down-command |
 ;;
-;; Deprecated keybindings:
-;;
-;;  | key   | binding             |
-;;  |-------|---------------------|
-;;  | S     | pomp-stop           |
-;;
 ;; Customization:
 ;;
 ;;  To change timer duration:
@@ -397,7 +391,6 @@ TIME may be nil."
     (define-key map (kbd "Q") #'pomp-quit)
     (define-key map (kbd "R") #'pomp-reset)
     (define-key map (kbd "W") #'pomp-work)
-    (define-key map (kbd "S") #'pomp-stop)
     (define-key map (kbd "B") #'pomp-break)
     (suppress-keymap map)
     map))
