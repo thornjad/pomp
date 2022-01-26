@@ -4,7 +4,7 @@
 ;; Copyright © 2019-2022 Jade Michael Thornton
 ;; URL: https://gitlab.com/thornjad/pomp
 ;; Package-Requires ((emacs "27.0"))
-;; Version: 1.0.1
+;; Version: 1.1.0
 ;;
 ;; This file is not part of GNU Emacs
 ;;
