@@ -23,14 +23,6 @@ Pomp is a simple and useful pomodoro-style timer.
  | q     | quit-window         |
  | h     | describe-mode       |
  | ?     | describe-mode       |
- | g     | revert-buffer       |
- | DEL   | scroll-down-command |
-
-### Deprecated keybindings
-
- | key   | binding             |
- |-------|---------------------|
- | S     | pomp-stop           |
 
 ### Customization
 
