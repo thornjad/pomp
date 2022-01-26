@@ -25,8 +25,10 @@ Pomp is a simple and useful pomodoro-style timer.
  | ?     | describe-mode       |
  | g     | revert-buffer       |
  | DEL   | scroll-down-command |
- |-------|---------------------|
- | Deprecated                  |
+
+### Deprecated keybindings
+
+ | key   | binding             |
  |-------|---------------------|
  | S     | pomp-stop           |
 
